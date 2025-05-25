@@ -12,6 +12,11 @@ items = [
    {"id": 3, "nome": "Chaveiro", "preco": 9.90,}
 ]
 
+# Endpoint para listar todos os itens
+@app.route('/api/items', methods=['GET'])
+def get_items():
+   return jsonify(items), 200
+
 
 # Enpoint para enviar itens
 @app.route('/api/items', methods=['POST'])
@@ -20,11 +25,6 @@ def create_item():
    items.append(data)
    return jsonify({"message": "Item adicionado", "item": data}), 201
 
-
-# Endpoint para listar todos os itens
-@app.route('/api/items', methods=['GET'])
-def get_items():
-   return jsonify(items), 200
 
 # Enpoint para buscar um item específico
 @app.route('/api/items/<int:item_id>', methods=['GET'])
