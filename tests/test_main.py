@@ -34,4 +34,8 @@ def test_create_item():
    assert data["message"] == "Item adicionado"
  
 # Teste para endpoint de buscar um item específico
+def test_get_item_by_id():
+   client = app.test_client()
+   response = client.get('/api/items/2')
+   assert response.status_code == 200
 
