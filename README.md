@@ -111,20 +111,19 @@ def test_post_new_item()       # Testa criação de item
 - Configuração de execução automática de testes
 - Definição de triggers (push, pull request)
 - Implementação de pipeline de qualidade
+- 
+![Teste_workflow_github](https://github.com/user-attachments/assets/42424344-8d97-437b-a389-c81dfc260e6b)
 
-**Pipeline implementado:**
-1. **Checkout do código** - Baixa o código do repositório
-2. **Setup Python** - Configura ambiente Python
-3. **Instalar dependências** - Instala bibliotecas do requirements.txt
-4. **Executar testes** - Roda pytest automaticamente
-5. **Verificar qualidade** - Análise de código
 
 ### 6. 💪 Testes de Performance com Locust
 - Instalação e configuração do Locust
 - Criação de cenários de teste de carga
 - Simulação de usuários simultâneos
 - Análise de métricas de performance
+- 
+![Teste_de_stress_locust](https://github.com/user-attachments/assets/558b25f6-2d8a-4682-b601-489796b1417c)
 
+![resultado_locust](https://github.com/user-attachments/assets/9e971b70-226c-4e84-b1c0-4ad47ba48ee5)
 
 **Cenários testados:**
 ```python
