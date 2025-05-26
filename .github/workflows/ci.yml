@@ -1,0 +1,29 @@
+name: Testes Automáticos
+
+# Quando executar: toda vez que fizer push
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # 1. Baixar o código
+    - name: Baixar código
+      uses: actions/checkout@v4
+    
+    # 2. Instalar Python
+    - name: Instalar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+    
+    # 3. Instalar bibliotecas
+    - name: Instalar bibliotecas
+      run: pip install -r requirements.txt
+    
+    # 4. Executar testes
+    - name: Executar testes
+      run: pytest tests/ -v
